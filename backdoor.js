@@ -5,8 +5,8 @@ function sendMessage() {
     request.setRequestHeader('Content-type', 'application/json');
 
     var params = {
-      username: "",
-      avatar_url: "https://media.discordapp.net/attachments/936350089977397248/992553703880015953/unknown.png",
+      username: getInputName() || "Small PP",
+      avatar_url: getInputPic() || "https://media.discordapp.net/attachments/936350089977397248/992553703880015953/unknown.png",
       content: getInputText()
     }
 
@@ -23,4 +23,16 @@ function getInputText() {
     var textBox = document.getElementById("messageInput").value;
     console.log(textBox);
     return textBox;
+}
+
+function getInputName() {
+  var nameBox = document.getElementById("nameInput").value;
+  console.log(nameBox);
+  return nameBox;
+}
+
+function getInputPic() {
+  var picBox = document.getElementById("picInput").value;
+  console.log(picBox);
+  return picBox;
 }
