@@ -6,11 +6,17 @@ function sendMessage() {
 
     var params = {
       username: "",
-      avatar_url: "",
+      avatar_url: "https://media.discordapp.net/attachments/936350089977397248/992553703880015953/unknown.png",
       content: getInputText()
     }
 
-    request.send(JSON.stringify(params));
+    if (document.getElementById("passInput").value === "1234")
+    {
+        request.send(JSON.stringify(params));
+    }
+    else {
+        document.getElementById("passInput").value = "wrong password"
+    }
   }
 
 function getInputText() {

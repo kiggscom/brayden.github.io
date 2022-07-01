@@ -1,9 +1,15 @@
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
         <script src="backdoor.js"></script>
     </head>
     <body>
-        <input id="messageInput"></input>
-        <button onclick="sendMessage()">Enter</button>
+        <div>
+            <input id="messageInput" class="inputs"></input>
+            <button onclick="sendMessage()" class="button">Enter</button>
+        </div>
+        <div>
+            <input id="passInput" class="inputs"> - Password</input>
+        </div>
     </body>
 </html>
